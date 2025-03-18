@@ -1,10 +1,9 @@
 const tab2Choice = document.querySelector(".choiceTab2");
-const graphe2 = document.querySelector(".grapheTab2");
 const grapeTab2 = document.getElementById("grapheTab2").getContext("2d");
 let chartTab2;
 
 const changeGraphe = (id) => {
-    fetch("http://php/DCS/Tab2/getData.php?id=" + id)
+    fetch("../DCS/Tab2/getData.php?id=" + id)
         .then(response => response.json())
         .then(data => {
             let montant = [];
