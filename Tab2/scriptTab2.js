@@ -68,7 +68,7 @@ const changeGraphe = (id) => {
 };
 
 
-fetch("http://php/DCS/Tab2/getData.php?affichage")
+fetch("../DCS/Tab2/getData.php?affichage")
     .then(response => response.json())
     .then(data => {
         tab2Choice.innerHTML = "";
