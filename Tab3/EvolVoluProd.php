@@ -5,7 +5,7 @@ use PDO;
 use PDOException;
 
 function connectDB() {
-    return new PDO('mysql:host=localhost;dbname=dcs;charset=utf8', 'root', '', [
+    return new PDO('mysql:host=localhost;dbname=dcs;charset=utf8', 'dcs', '1234', [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 }

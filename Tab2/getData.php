@@ -3,8 +3,8 @@ function initialiseConnexionBDD(): PDO {
     $bdd = null;
     try {
         $bdd = new PDO('mysql:host=localhost;dbname=dcs;charset=utf8',
-            'root',
-            ''
+            'dcs',
+            '1234'
         );
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(Exception $e) {
