@@ -3,7 +3,7 @@ const grapeTab2 = document.getElementById("grapheTab2").getContext("2d");
 let chartTab2;
 
 const changeGraphe = (id) => {
-    fetch("../DCS/Tab2/getData.php?id=" + id)
+    fetch("https://dcs.greffetjules.fr/Tab2/getData.php?id=" + id)
         .then(response => response.json())
         .then(data => {
             let montant = [];
@@ -68,7 +68,7 @@ const changeGraphe = (id) => {
 };
 
 
-fetch("../DCS/Tab2/getData.php?affichage")
+fetch("https://dcs.greffetjules.fr/Tab2/getData.php?affichage")
     .then(response => response.json())
     .then(data => {
         tab2Choice.innerHTML = "";

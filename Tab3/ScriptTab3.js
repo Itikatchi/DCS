@@ -4,7 +4,7 @@ const grapeTab3 = document.getElementById("grapheTab3").getContext("2d");
 let chartTab3;
 
 const changeGraphe3 = (produitID) => {
-    fetch(`../DCS/Tab3/EvolVoluProd.php?produitID=${produitID}`)
+    fetch(`https://dcs.greffetjules.fr/Tab3/EvolVoluProd.php?produitID=${produitID}`)
         .then(response => response.json())
         .then(data => {
             let labelsSet = new Set();
