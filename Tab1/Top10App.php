@@ -4,8 +4,8 @@ function initalisatiseConnexionBDD(): PDO {
     $bdd = null;
     try {
         $bdd = new PDO('mysql:host=localhost;dbname=dcs',
-         'root',
-         ''
+         'dcs',
+         '1234'
          );
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
