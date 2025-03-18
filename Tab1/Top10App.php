@@ -17,7 +17,7 @@ function initalisatiseConnexionBDD(): PDO {
 
 function topApp($GrandClientID) {
     $bdd = initalisatiseConnexionBDD();
-    $query = "SELECT gc.GrandClientID, gc.NomGrandClient, lf.prix, app.IRT, app.nomAppli FROM grandclients gc 
+    $query = "SELECT gc.NomGrandClient, lf.prix, app.IRT, app.nomAppli FROM grandclients gc 
             INNER JOIN clients c ON c.GrandClientID = gc.GrandClientID 
             INNER JOIN centresactivite ca ON ca.CentreActiviteID = c.CentreActiviteID INNER JOIN ligne_facturation lf ON lf.CentreActiviteID = ca.CentreActiviteID INNER JOIN application app ON app.IRT = lf.IRT 
             WHERE gc.GrandClientID = ? 
@@ -25,15 +25,9 @@ function topApp($GrandClientID) {
             LIMIT 10";
 
     $stmt = $bdd->prepare($query);
+    $stmt->execute([$GrandClientID]);
 
-    $result = $stmt->fetchAll();
-    if($result) {
-        $stmt->setFetchMode(PDO::FETCH_NUM);
-        foreach ($result as $row) {
-            $result[] = $row;
-        }
-    }
-
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
 
