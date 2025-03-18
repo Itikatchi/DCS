@@ -38,3 +38,8 @@ body {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+.align {
+  display: flex;
+  gap: 10px;
+}
