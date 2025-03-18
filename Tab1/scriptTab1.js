@@ -8,7 +8,7 @@ const grapheTab1 = document.getElementById("grapheTab1").getContext("2d");
 let chart1;
 
 function createGraphe(id) {
-    fetch("../DCS/Tab1/Top10App.php?idClient=" + id)
+    fetch("https://dcs.greffetjules.fr/Tab1/Top10App.php?idClient=" + id)
         .then(response => response.json())
         .then(data => {
             console.log(data);
