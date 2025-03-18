@@ -48,7 +48,7 @@ const changeGraphe = (produitID) => {
                         x: {
                             title: {
                                 display: true,
-                                text: "Date (Année-Mois)"
+                                text: "Date (Annee-Mois)"
                             }
                         },
                         y: {
