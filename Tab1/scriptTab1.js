@@ -11,8 +11,6 @@ function createGraphe(id) {
     fetch("https://dcs.greffetjules.fr/Tab1/Top10App.php?idClient=" + id)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-
             classement.innerHTML = "";
             data.forEach((row, index) => {
                 classement.innerHTML += `
