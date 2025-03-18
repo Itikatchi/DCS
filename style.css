@@ -61,3 +61,8 @@ body {
   height: 500px; /* Augmente la hauteur (ajuste selon tes besoins) */
   max-height: 600px; /* Évite qu'il devienne trop grand */
 }
+#grapheTab3 {
+  width: 100%; /* Pour qu'il prenne toute la largeur */
+  height: 500px; /* Augmente la hauteur (ajuste selon tes besoins) */
+  max-height: 600px; /* Évite qu'il devienne trop grand */
+}

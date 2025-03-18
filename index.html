@@ -9,7 +9,8 @@
       <button class="tablinks" onclick="openTab(event, 'Tab2')">Tab 2</button>
       <button class="tablinks" onclick="openTab(event, 'Tab3')">Tab 3</button>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <div id="Tab1" class="tabcontent">
       <h3>Tab 1</h3>
       <p>Contenu pour Tab 1.</p>
@@ -25,33 +26,23 @@
       <script src="Tab2/scriptTab2.js"></script>
     </div>
 
+
     <div id="Tab3" class="tabcontent">
+
       <h3>Tab 3</h3>
-      <p>Contenu pour Tab 3.</p>
-      <canvas id="myChart"></canvas>
+      <div class="choiceTab2">
+        <label for="produitSelect">Choisir un produit:</label>
+        <select id="produitSelect">
+          <option value="20">Produit 1_4</option>
+          <option value="13">Produit 1_1</option>
+        </select>
+      </div>
+      <div class="grapheTab2" >
+        <canvas id="grapheTab3"></canvas>
+      </div>
+      <script src="Tab3/ScriptTab3.js"></script>
     </div>
 
-    <script src="script.js"></script>
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      var ctx = document.getElementById('myChart').getContext('2d');
-      var myChart = new Chart(ctx, {
-        type: 'bar', // Type de graphique
-        data: {
-          labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai'],
-          datasets: [{
-            label: 'Ventes',
-            data: [12, 19, 3, 5, 8], // Valeurs
-            backgroundColor: 'rgba(54, 162, 235, 0.5)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-          }]
-        }
-      });
-    </script>
+  <script src="script.js"></script>
   </body>
 </html>
