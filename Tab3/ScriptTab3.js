@@ -3,8 +3,8 @@ const graphe3 = document.querySelector(".grapheTab3");
 const grapeTab3 = document.getElementById("grapheTab3").getContext("2d");
 let chartTab3;
 
-const changeGraphe = (produitID) => {
-    fetch(`http://127.0.0.1/DCS/Tab3/EvolVoluProd.php?produitID=${produitID}`)
+const changeGraphe3 = (produitID) => {
+    fetch(`../DCS/Tab3/EvolVoluProd.php?produitID=${produitID}`)
         .then(response => response.json())
         .then(data => {
             let labelsSet = new Set();
@@ -33,7 +33,7 @@ const changeGraphe = (produitID) => {
                             label: `Produit ${produitID}`,
                             data: volumeData,
                             borderColor: "blue",
-                            backgroundColor: "rgba(255, 0, 0, 0.2)",
+                            backgroundColor: "rgba(0, 0, 0, 0.2)",
                             borderWidth: 2,
                             pointRadius: 5,
                             pointBackgroundColor: "blue",
@@ -66,9 +66,9 @@ const changeGraphe = (produitID) => {
 
 // Lorsqu'un changement de produit est sélectionné, on recharge le graphique
 document.getElementById("produitSelect").addEventListener("change", (e) => {
-    changeGraphe(e.target.value);
+    changeGraphe3(e.target.value);
 });
 
 // Initialiser le graphique avec le produit 20 par défaut
-changeGraphe(20);
+changeGraphe3(20);
 

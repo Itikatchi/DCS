@@ -9,7 +9,8 @@
       <button class="tablinks" onclick="openTab(event, 'Tab2')">Tab 2</button>
       <button class="tablinks" onclick="openTab(event, 'Tab3')">Tab 3</button>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <div id="Tab1" class="tabcontent">
       <h3>Tab 1</h3>
       <p>Contenu pour Tab 1.</p>
@@ -17,20 +18,26 @@
 
     <div id="Tab2" class="tabcontent">
       <h3>Tab 2</h3>
-      <p>Contenu pour Tab 2.</p>
-
+      <div class="choiceTab2">
+      </div>
+      <div class="grapheTab2" >
+        <canvas id="grapheTab2"></canvas>
+      </div>
+      <script src="Tab2/scriptTab2.js"></script>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
     <div id="Tab3" class="tabcontent">
+
       <h3>Tab 3</h3>
-      <div class="choiceTab3">
+      <div class="choiceTab2">
         <label for="produitSelect">Choisir un produit:</label>
         <select id="produitSelect">
           <option value="20">Produit 1_4</option>
           <option value="13">Produit 1_1</option>
         </select>
       </div>
-      <div class="grapheTab3" >
+      <div class="grapheTab2" >
         <canvas id="grapheTab3"></canvas>
       </div>
       <script src="Tab3/ScriptTab3.js"></script>
