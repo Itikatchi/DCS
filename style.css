@@ -38,3 +38,26 @@ body {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+.choiceTab2 {
+  display: flex;
+  gap: 10px;
+}
+
+.choiceText {
+  padding: 1.5px;
+  transition: all;
+  transition-duration: 200ms;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.choiceText:hover  {
+  background: gray;
+}
+
+#grapheTab2 {
+  width: 100%; /* Pour qu'il prenne toute la largeur */
+  height: 500px; /* Augmente la hauteur (ajuste selon tes besoins) */
+  max-height: 600px; /* Évite qu'il devienne trop grand */
+}
