@@ -1,11 +1,11 @@
-<?php
+    <?php
 
 function initalisatiseConnexionBDD(): PDO {
     $bdd = null;
     try {
         $bdd = new PDO('mysql:host=localhost;dbname=dcs',
-         'root',
-         ''
+         'dcs',
+         '1234'
          );
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
@@ -17,11 +17,12 @@ function initalisatiseConnexionBDD(): PDO {
 
 function topApp($GrandClientID) {
     $bdd = initalisatiseConnexionBDD();
-    $query = "SELECT gc.NomGrandClient, lf.prix, app.IRT, app.nomAppli FROM grandclients gc 
+    $query = "SELECT gc.NomGrandClient, sum(lf.prix) as prix, app.IRT, app.nomAppli FROM grandclients gc 
             INNER JOIN clients c ON c.GrandClientID = gc.GrandClientID 
             INNER JOIN centresactivite ca ON ca.CentreActiviteID = c.CentreActiviteID INNER JOIN ligne_facturation lf ON lf.CentreActiviteID = ca.CentreActiviteID INNER JOIN application app ON app.IRT = lf.IRT 
             WHERE gc.GrandClientID = ? 
-            ORDER BY lf.prix DESC 
+            GROUP BY app.IRT
+            ORDER BY prix DESC 
             LIMIT 10";
 
     $stmt = $bdd->prepare($query);
