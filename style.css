@@ -86,7 +86,7 @@ body {
 }
 
 #grapheTab2 {
-  border-radius: 20px;
+  border-radius: 15px;
   color: white;
   background-color: var(--chart-3);
   width: 100%; /* Pour qu'il prenne toute la largeur */
@@ -94,7 +94,7 @@ body {
   max-height: 600px; /* Évite qu'il devienne trop grand */
 }
 #grapheTab3 {
-  border-radius: 20px;
+  border-radius: 15px;
   color: white;
   background-color: var(--chart-3);
   width: 100%; /* Pour qu'il prenne toute la largeur */
@@ -112,7 +112,7 @@ body {
 }
 
 #grapheTab1 {
-  border-radius: 10px;
+  border-radius: 15px;
   color: white;
   background-color: var(--chart-3);
   width: 100%;
