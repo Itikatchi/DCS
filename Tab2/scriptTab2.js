@@ -32,25 +32,40 @@ const changeGraphe = (id) => {
                     datasets: [{
                         label: "Montant (euros)",
                         data: montant,
-                        borderColor: "blue",
-                        backgroundColor: "rgba(0, 0, 255, 0.2)",
+                        borderColor: "#ffef00",
+                        backgroundColor: "rgba(255, 225, 1, 0.6)",
+                        color: "rgba(255, 255, 255, 0.9)",
+                        fill: true,
                         borderWidth: 2,
                         pointRadius: 5,
-                        pointBackgroundColor: "blue",
+                        pointBackgroundColor: "#ffef00",
                         tension: 0.3
                     }]
                 },
                 options: {
+                    plugins: {
+                        legend:{
+                            labels:{
+                                color: "rgba(255, 255, 255, 0.9)",
+                            },
+                        }
+                    },
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
                         x: {
+                            ticks: {
+                                color: "rgba(255, 255, 255, 0.9)",
+                            },
                             title: {
                                 display: true,
                                 text: "Date"
                             }
                         },
                         y: {
+                            ticks: {
+                                color: "rgba(255, 255, 255, 0.9)",
+                            },
                             title: {
                                 display: true,
                                 text: "Montant (euros)"

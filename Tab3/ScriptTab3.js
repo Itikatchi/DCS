@@ -32,32 +32,52 @@ const changeGraphe3 = (produitID) => {
                         {
                             label: `Produit ${produitID}`,
                             data: volumeData,
-                            borderColor: "blue",
-                            backgroundColor: "rgba(0, 0, 0, 0.2)",
+
+                            borderColor: "#ffef00",
+                            backgroundColor: "rgba(255, 225, 1, 0.6)",
+                            color: "rgba(255, 255, 255, 0.9)",
+                            fill: true,
                             borderWidth: 2,
                             pointRadius: 5,
-                            pointBackgroundColor: "blue",
-                            tension: 0.3
+                            pointBackgroundColor: "#ffef00",
+                            tension: 0.4,
                         }
                     ]
                 },
                 options: {
+                    plugins: {
+                      legend:{
+                          labels:{
+                              color: "rgba(255, 255, 255, 0.9)",
+                          },
+                        }
+                    },
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
                         x: {
+                            ticks: {
+                                color: "rgba(255, 255, 255, 0.9)",
+                            },
                             title: {
+
                                 display: true,
+                                grid: { display: false },
+                                color: "rgba(255, 255, 255, 0.9)",
                                 text: "Date (Annee-Mois)"
                             }
                         },
                         y: {
+                            ticks: {
+                                color: "rgba(255, 255, 255, 0.9)",
+                            },
                             title: {
                                 display: true,
+                                color: "rgba(255, 255, 255, 0.9)",
                                 text: "Volume"
                             }
                         }
-                    }
+                    },
                 }
             });
         })

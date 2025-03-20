@@ -36,19 +36,36 @@ function createGraphe(id) {
                 data: {
                     labels: labels,
                     datasets: [{
+
                         label: 'Montant en euros',
                         data: prix,
-                        backgroundColor: 'blue',
-                        borderColor: 'black',
+                        fill: true,
+                        backgroundColor: "rgba(255, 225, 1, 0.6)",
+                        color: "rgba(255, 255, 255, 0.9)",
+                        borderColor: "#ffef00",
                         borderWidth: 1
                     }]
                 },
                 options: {
+                    plugins: {
+                        legend:{
+                            labels:{
+                                color: "rgba(255, 255, 255, 0.9)",
+                            },
+                        }
+                    },
                     responsive: true,
                     scales: {
+                        x: {
+                            ticks: {
+                                color: "rgba(255, 255, 255, 0.9)",
+                            },
+                        },
                         y: {
+
                             beginAtZero: true,
                             ticks: {
+                                color: "rgba(255, 255, 255, 0.9)",
                                 callback: function(value) {
                                     return value + ' euros';
                                 }

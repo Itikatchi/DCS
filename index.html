@@ -5,14 +5,14 @@
   </head>
   <body>
     <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Tab1')">Tab 1</button>
-      <button class="tablinks" onclick="openTab(event, 'Tab2')">Tab 2</button>
-      <button class="tablinks" onclick="openTab(event, 'Tab3')">Tab 3</button>
+      <button class="tablinks" onclick="openTab(event, 'Tab1')">Top 10 Application</button>
+      <button class="tablinks" onclick="openTab(event, 'Tab2')">Evolution des montants</button>
+      <button class="tablinks" onclick="openTab(event, 'Tab3')">Evolution des volumes</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <div id="Tab1" class="tabcontent">
-      <h3>Tab 1</h3>
+      <h3>Top 10 Application par Grand Client</h3>
       <div class="align">
         <p id="690" class="choiceText">Client 1</p>
         <p id="689" class="choiceText">Client 2</p>
@@ -26,7 +26,7 @@
     </div>
 
     <div id="Tab2" class="tabcontent">
-      <h3>Tab 2</h3>
+      <h3>Evolution des montants pour les 5 plus grands Clients</h3>
       <div class="choiceTab2">
       </div>
       <div class="grapheTab2" >
@@ -37,8 +37,7 @@
 
 
     <div id="Tab3" class="tabcontent">
-
-      <h3>Tab 3</h3>
+      <h3>Evolution des volumes des produits 1_1 et 1_4</h3>
       <div class="choiceTab2">
         <label for="produitSelect">Choisir un produit:</label>
         <select id="produitSelect">
