@@ -65,7 +65,7 @@ function createGraphe(id) {
                             ticks: {
                                 color: "rgba(255, 255, 255, 0.9)",
                                 callback: function(value) {
-                                    return value + ' euros';
+                                    return value;
                                 }
                             }
                         }

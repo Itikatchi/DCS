@@ -59,7 +59,8 @@ const changeGraphe = (id) => {
                             },
                             title: {
                                 display: true,
-                                text: "Date"
+                                text: "Date",
+                                color: "rgba(255, 255, 255, 0.9)",
                             }
                         },
                         y: {
@@ -68,7 +69,8 @@ const changeGraphe = (id) => {
                             },
                             title: {
                                 display: true,
-                                text: "Montant (euros)"
+                                text: "Montant (euros)",
+                                color: "rgba(255, 255, 255, 0.9)",
                             },
                             suggestedMin: minMontant,
                             suggestedMax: maxMontant,
